@@ -2,3 +2,10 @@
 .terraform/
 *.tfstate
 *.tfstate.*
+.DS_Store
+.terraform/
+*.tfstate
+*.tfstate.*
+backend/.env
+backend/node_modules
+frontend/node_modules
