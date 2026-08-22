@@ -52,7 +52,7 @@
       formData.append('cv', document.getElementById('cv').files[0]);
 
       try {
-        const response = await fetch('http://localhost:3010/upload-cv', {
+        const response = await fetch('http://${window.location.hostname}:3010/upload-cv', {
         method: 'POST',
         body: formData
         });
