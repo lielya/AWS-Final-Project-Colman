@@ -1,9 +1,9 @@
 // Launch Template
 resource "aws_launch_template" "asg-launch-template" {
   name                   = "web_servers_lt"
-  image_id               = "ami-0d4d82c5fdae24f58" //change
-  key_name               = "colman2024" //change
-  instance_type          = "t2.micro"
+  image_id               = "ami-0f417677f9bf398c1" //change
+  key_name               = "amit-test-key" //change
+  instance_type          = "t3.micro"
   vpc_security_group_ids = [ aws_security_group.web_servers.id, aws_security_group.internal.id ]
   
   tag_specifications {
@@ -12,7 +12,6 @@ resource "aws_launch_template" "asg-launch-template" {
       Name = "web-servers"
     }
   }
-  user_data = filebase64("init.sh") // check this line
 }
 
 // Create the ASG Itself
