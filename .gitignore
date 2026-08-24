@@ -1,14 +1,47 @@
+# OS
 .DS_Store
-.terraform/
+Thumbs.db
+
+# Terraform — provider plugins & modules (keep .terraform.lock.hcl in git)
+**/.terraform/
+
+# Terraform — state files contain secrets (IPs, IDs, passwords)
 *.tfstate
 *.tfstate.*
-.DS_Store
-.terraform/
-*.tfstate
-*.tfstate.*
-backend/.env
-backend/node_modules
-frontend/node_modules
-backend/.env
-backend/node_modules
-frontend/node_modules
+*.tfstate.backup
+
+# Terraform — crash logs, local overrides, plans
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*tfplan*
+.terraformrc
+terraform.rc
+
+# Terraform — variable files often contain secrets
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+
+# Secrets & credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials
+aws_credentials
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.cache/
+dist/
+coverage/

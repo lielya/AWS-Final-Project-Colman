@@ -1,7 +1,7 @@
 // Launch Template
 resource "aws_launch_template" "asg-launch-template" {
   name                   = "web_servers_lt"
-  image_id               = "ami-0f417677f9bf398c1" //change
+  image_id               = "ami-0cbff979d9a21d0f0" // keep
   key_name               = "amit-test-key" //change
   instance_type          = "t3.micro"
   vpc_security_group_ids = [ aws_security_group.web_servers.id, aws_security_group.internal.id ]
